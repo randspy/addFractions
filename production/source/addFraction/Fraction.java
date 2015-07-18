@@ -7,7 +7,7 @@ public class Fraction {
         this.number = number;
     }
 
-    public Fraction add(Fraction fraction) {
+    public Fraction plus(Fraction fraction) {
         return new Fraction(fraction.number);
     }
 
