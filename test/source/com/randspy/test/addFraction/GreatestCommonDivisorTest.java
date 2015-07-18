@@ -18,6 +18,7 @@ public class GreatestCommonDivisorTest {
     @Test
     public void twoDifferentNumbers() throws Exception {
         assertEquals(1, gcd.calculate(1, 2));
+        assertEquals(2, gcd.calculate(2, 2));
         assertEquals(2, gcd.calculate(4, 6));
         assertEquals(4, gcd.calculate(28, 32));
         assertEquals(1, gcd.calculate(29, 32));
