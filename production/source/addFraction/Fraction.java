@@ -2,18 +2,37 @@ package addFraction;
 
 public class Fraction {
     private int number;
+    private int nominator;
+    private int denominator;
 
     public Fraction(int number) {
         this.number = number;
+        this.denominator = 1;
+    }
+
+    public Fraction(int nominator, int denominator) {
+        this.nominator = nominator;
+        this.denominator = denominator;
     }
 
     public Fraction plus(Fraction fraction) {
-        return new Fraction(fraction.number + number);
+        if (fraction.denominator != 1) {
+            return new Fraction(fraction.nominator, fraction.denominator);
+        }
+        else
+        {
+            return new Fraction(fraction.number + number);
+        }
     }
 
     @Override
     public String toString() {
-        return "Fraction is " + number;
+        if (denominator != 1) {
+            return nominator + " / " + denominator;
+        }
+        else {
+            return "" + number;
+        }
     }
 
     @Override
@@ -21,8 +40,16 @@ public class Fraction {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        return number == ((Fraction) o).number;
+        if(denominator != 1)
+        {
+            return nominator == ((Fraction) o).nominator && denominator == ((Fraction) o).denominator;
+        }
+        else
+        {
+            return number == ((Fraction) o).number;
+        }
     }
+
     @Override
     public int hashCode() {
         return number;

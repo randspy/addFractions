@@ -22,5 +22,14 @@ public class AddFractions {
         assertEquals(new Fraction(3), new Fraction(3).plus(new Fraction(0)));
     }
 
+    @Test
+    public void addNumberToNumber() throws Exception {
+        assertEquals(new Fraction(3), new Fraction(1).plus(new Fraction(2)));
+    }
+
+    @Test
+    public void addZeroWithNumberWithDenominator() throws Exception {
+        assertEquals(new Fraction(1,2), new Fraction(0).plus(new Fraction(1,2)));
+    }
 
 }
