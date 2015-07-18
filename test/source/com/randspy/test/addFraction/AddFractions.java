@@ -37,4 +37,9 @@ public class AddFractions {
         assertEquals(new Fraction(1,3), new Fraction(1,3).plus(new Fraction(0)));
     }
 
+    @Test
+    public void addTwoNumbersWithDenominator() throws Exception {
+        assertEquals(new Fraction(5, 6), new Fraction(1,3).plus(new Fraction(1,2)));
+    }
+
 }

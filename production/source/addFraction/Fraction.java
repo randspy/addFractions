@@ -16,8 +16,9 @@ public class Fraction {
     }
 
     public Fraction plus(Fraction fraction) {
-        if (fraction.denominator != 1) {
-            return new Fraction(fraction.nominator, fraction.denominator);
+        if (fraction.denominator != 1 || denominator != 1) {
+            return new Fraction(
+                    fraction.nominator * denominator + nominator * fraction.denominator, fraction.denominator * denominator);
         }
         else if (denominator != 1) {
             return new Fraction(nominator, denominator);
