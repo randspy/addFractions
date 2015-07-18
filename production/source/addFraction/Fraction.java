@@ -19,8 +19,10 @@ public class Fraction {
         if (fraction.denominator != 1) {
             return new Fraction(fraction.nominator, fraction.denominator);
         }
-        else
-        {
+        else if (denominator != 1) {
+            return new Fraction(nominator, denominator);
+        }
+        else {
             return new Fraction(fraction.number + number);
         }
     }

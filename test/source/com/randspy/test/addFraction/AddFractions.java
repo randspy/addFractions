@@ -28,8 +28,13 @@ public class AddFractions {
     }
 
     @Test
-    public void addZeroWithNumberWithDenominator() throws Exception {
+    public void addZeroToNumberWithDenominator() throws Exception {
         assertEquals(new Fraction(1,2), new Fraction(0).plus(new Fraction(1,2)));
+    }
+
+    @Test
+    public void addNumberWithDenominatorToZero() throws Exception {
+        assertEquals(new Fraction(1,3), new Fraction(1,3).plus(new Fraction(0)));
     }
 
 }
