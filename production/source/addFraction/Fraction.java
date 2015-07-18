@@ -8,7 +8,7 @@ public class Fraction {
     }
 
     public Fraction plus(Fraction fraction) {
-        return new Fraction(fraction.number);
+        return new Fraction(fraction.number + number);
     }
 
     @Override

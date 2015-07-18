@@ -17,5 +17,10 @@ public class AddFractions {
         assertEquals(new Fraction(5), new Fraction(0).plus(new Fraction(5)));
     }
 
+    @Test
+    public void addNumberToZero() throws Exception {
+        assertEquals(new Fraction(3), new Fraction(3).plus(new Fraction(0)));
+    }
+
 
 }
