@@ -5,8 +5,7 @@ public class Fraction {
     private int denominator;
 
     public Fraction(int number) {
-        this.nominator = number;
-        this.denominator = 1;
+        this(number, 1);
     }
 
     public Fraction(int nominator, int denominator) {
@@ -36,6 +35,6 @@ public class Fraction {
 
     @Override
     public int hashCode() {
-        return nominator + denominator;
+        return 31 * nominator + denominator;
     }
 }
